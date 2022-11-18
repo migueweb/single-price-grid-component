@@ -1,0 +1,125 @@
+// Primary
+$cyan: #2ab2af;
+$bright-yellow: #c0df34;
+// Neutral
+$light-gray: #e5eff5;
+$grayish-blue: #98a6bd;
+
+@import "https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap";
+@import "../bootstrap/bootstrap.scss";
+
+body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Karla', sans-serif;
+    background-color: $light-gray;
+}
+.wrapper {
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: 3px 3px 6px rgba($cyan, 0.3);
+}
+.section {
+    padding: 1.5rem;
+}
+.header {
+    background-color: #fff;
+    h1 {
+        color: $cyan;
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $bright-yellow;
+        border-bottom: 1.3rem;
+    }
+    p {
+        font-size: 1.2rem;
+        color: $grayish-blue;
+        font-weight: lighter;
+    }
+}
+.subscription {
+    background-color: $cyan;
+    h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+    .price {
+        color: #fff;
+        .cost {
+            color: $light-gray;
+        }
+        span {
+            color: #fff;
+            font-weight: bold;
+            font-size: 2rem;
+        }        
+    }
+    .sign-up {
+        margin-top: 1.5rem;
+        text-decoration: none;
+        text-align: center;
+        padding: .9rem;
+        border-radius: .3rem;
+        display: block;
+        width: 100%;
+        color: #fff;
+        font-weight: bold;
+        background-color: $bright-yellow;
+        box-shadow: 0px 3px 5px rgba(#000, .3);
+        transition: .1s  ease;
+        &:active {
+        transform: translateY(.1rem);
+        box-shadow: 0px 1px 2px rgba(#000, .3);
+        }
+    }
+}
+.why-us {
+    background-color: lighten($cyan, 4%);
+    h2 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #fff;
+    }
+    p {
+        text-align: left;
+        line-height: 1.4rem;
+        color: $light-gray;
+        width: 74%;
+    }
+}
+@include media-breakpoint-up(lg) {
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+    .wrapper {
+        width: 45rem;
+    }
+    .section {
+        padding: 3rem;
+    }
+    .header{
+        p {
+            width: 90%;
+        }
+    }
+    .why-us {
+        p {
+            text-align: left;
+            line-height: 1.5rem;
+            color: $light-gray;
+            width: 80%;
+        }
+    }
+}
